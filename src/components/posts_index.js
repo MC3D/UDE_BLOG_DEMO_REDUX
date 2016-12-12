@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { fetchPosts } from '../actions/index';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {fetchPosts} from '../actions/index';
+import {Link} from 'react-router';
 
 class PostsIndex extends Component {
   componentWillMount() {
@@ -9,9 +10,16 @@ class PostsIndex extends Component {
 
   render() {
     return (
-      <div>Lists of Blog Posts</div>
+      <div>
+        <div className='text-right'>
+          <Link to="/posts/new" className='btn btn-primary'>
+            Add a Post
+          </Link>
+        </div>
+        Lists of Blog Posts
+      </div>
     );
   }
 }
 
-export default connect(null, { fetchPosts })(PostsIndex);
+export default connect(null, {fetchPosts})(PostsIndex);
