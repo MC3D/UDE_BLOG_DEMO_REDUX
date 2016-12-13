@@ -15,7 +15,6 @@ class PostsNew extends Component {
        });
   }
   render() {
-
     // const handleSubmit = this.props.handleSubmit;
     // const title = this.props.fields.title;
     const { fields: { title, categories, content }, handleSubmit } =  this.props;
